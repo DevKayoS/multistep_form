@@ -5,7 +5,7 @@ import { ReviewForm } from "./components/reviewForm"
 import { useForm } from "./hooks/userForm"
 import { Steps } from "./components/steps"
 import { useState } from "react"
-
+import {FiSend} from 'react-icons/fi'
 
 type FormFields = {
   name: string,
@@ -23,9 +23,6 @@ export function App() {
   }
 
   const [data, setData] = useState(formTemplate)
-
-
-
   
   const updateFielHandler = (key: string, value: string) => {
 
@@ -37,16 +34,12 @@ export function App() {
 
   const formComponents = [
     <UserForm data={data} updateFielHandler={updateFielHandler}/>,
-    <ReviewForm/>,
-    <Thanks />
+    <ReviewForm data={data} updateFielHandler={updateFielHandler}/>,
+    <Thanks data={data}/>
   ]
 
-  const { currentStep, currentCopoment, changeStep} = useForm(formComponents)
-
-
-
+  const { currentStep, currentCopoment, changeStep, isLastStep} = useForm(formComponents)
   
-
   return(
     <div className="flex flex-col items-center justify-center mt-20">
       <div className="flex flex-col items-center mb-5">
@@ -67,12 +60,22 @@ export function App() {
               <GrFormPrevious/>
               <span>Voltar</span>
               </button>
-            <button 
+            {!isLastStep ? (
+              <button 
               type="submit"
               className="flex items-center justify-center hover:bg-emerald-500 shadow-md shadow-black rounded-md px-6 py-3 text-lg bg-slate-950/50">
               <span>Avançar</span>
               <GrFormNext/>
               </button>
+            ):(
+            <button 
+              type="button"
+              className="flex items-center justify-center hover:bg-emerald-500 shadow-md shadow-black rounded-md px-8 py-3 text-lg gap-2 bg-slate-950/50">
+               <span>Enviar</span>
+                <FiSend/>
+              </button>
+            )
+            }
           </div>
         </form>
       </div>
