@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# Formulário multistep
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/DevKayoS/multistep_form/assets/157029608/6374ec4f-1420-4fc6-af28-ea62e91cc0ba)
 
-Currently, two official plugins are available:
+##
+Esse projeto é um formulário multistep de avaliação de um produto, essa aplicação foi feita no intuito de estudar esse tipo de formulário utilizando somente o React com o typescript, na imagem acima vemos a tela inicial, onde colocamos o nome e o email do usuário, clicando em "Avançar" é direcionado para a próxima etapa do formulário.
+##
+![image](https://github.com/DevKayoS/multistep_form/assets/157029608/27296d4b-2779-4d99-830a-8997c64531c9)
+##
+Nessa imagem acima, vemos a próxima etapa do formulário, onde o usuário pode selecionar o nível de satisfação e deixar um comentário, ao clicar em avançar é levado para a última etapa do formulário:
+##
+![image](https://github.com/DevKayoS/multistep_form/assets/157029608/2f73b894-65b4-4c91-8a33-e679767ffad7)
+##
+Acima podemos ver a imagem da última etapa do formulário que é um agradecimento, além disso é mostrado o comentário e o nível de satisfação do usuário
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 
+Projeto feito com:
+  * React;
+  * Typescript;
+  * Tailwindcss;
+##
