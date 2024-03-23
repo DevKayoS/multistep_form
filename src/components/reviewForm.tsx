@@ -1,5 +1,3 @@
-import "./reviewForm.css"
-
 import {
   BsFillEmojiHeartEyesFill,
   BsFillEmojiSmileFill,
@@ -29,7 +27,7 @@ export function ReviewForm({data, updateFielHandler}: ReviewFormProps) {
             onChange={(e)=> updateFielHandler("review", e.target.value)}
             required
           />
-          <BsFillEmojiFrownFill className="size-10 peer-checked:text-emerald-500 text-black"/>
+          <BsFillEmojiFrownFill className="size-10 peer-checked:text-red-500 text-black"/>
           <p className="text-slate-400">Insatisfeito</p>
         </label>
         <label className="max-w-4 flex items-center flex-col space-y-3 cursor-pointer">
@@ -42,7 +40,7 @@ export function ReviewForm({data, updateFielHandler}: ReviewFormProps) {
             onChange={(e)=> updateFielHandler("review", e.target.value)}  
             required
           />
-          <BsFillEmojiNeutralFill  className="size-10 peer-checked:text-emerald-500 text-black"/>
+          <BsFillEmojiNeutralFill  className="size-10 peer-checked:text-orange-500 text-black"/>
           <p className="text-slate-400">Neutro</p>
         </label>
         <label className="max-w-4 flex items-center flex-col space-y-3 cursor-pointer">
@@ -55,7 +53,7 @@ export function ReviewForm({data, updateFielHandler}: ReviewFormProps) {
             onChange={(e)=> updateFielHandler("review", e.target.value)}
             required
           />
-          <BsFillEmojiSmileFill className="size-10 peer-checked:text-emerald-500 text-black"/>
+          <BsFillEmojiSmileFill className="size-10 peer-checked:text-yellow-500 text-black"/>
           <p className="text-slate-400">Satisfeito</p>
         </label>
         <label className="max-w-4 flex items-center flex-col space-y-3 cursor-pointer">
